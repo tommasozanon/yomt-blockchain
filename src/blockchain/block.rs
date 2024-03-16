@@ -1,3 +1,4 @@
+//! Here defined [Block] object, unit of blockchain
 use sled::IVec;
 use sha256::digest;
 
@@ -21,7 +22,7 @@ impl Block{
         self.start_hash.clone() + &self.last_hash
     
     }
-    ///returns block from IVec input (usually get from sled)
+    ///returns block from [IVec] input (usually get from sled)
     pub fn deserialize(&self,bb : IVec)->Block{
         let (a, b) = bb.split_at(64);
         let s_h: String = std::str::from_utf8(a).unwrap().to_string();
@@ -43,7 +44,7 @@ pub fn deserialize(bb : IVec)->Block{
     Block { start_hash: s_h, last_hash: l_h }
 
 }
-///given a blockhash in IVec format, returns blockhash in String
+///given a blockhash in [IVec] format, returns blockhash in String
 pub fn blockhash_deserialize(bh : IVec) -> String{
     std::str::from_utf8(bh.split_at(64).0).unwrap().to_string()
 

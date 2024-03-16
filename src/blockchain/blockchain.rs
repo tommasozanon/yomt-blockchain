@@ -1,3 +1,5 @@
+//! Here defined [Blockchain] and [BlockchainIter], struct that allows to interact with the
+//! blockchain
 use crate::blockchain::block::{Block, deserialize};
 use chrono::Utc;
 use sha256::digest;
