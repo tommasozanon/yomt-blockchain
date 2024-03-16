@@ -7,20 +7,20 @@ Inspired by [Solana Whitepaper](https://github.com/solana-labs/whitepaper/blob/m
 
 ## Usage
 ### Install rustc, cargo and rustfmt.
-`
+```
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 rustup component add rustfmt
-`
+```
 
 ### Build from source
-`
+```
 cargo build --release
-`
+```
 
 ### Run
-`
+```
 ./yomt-blockchain
-`
+```
 
 I'm open to all kind of suggestions :)
